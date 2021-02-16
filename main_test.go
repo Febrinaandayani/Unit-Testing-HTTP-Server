@@ -32,5 +32,5 @@ func TestCreateEndpoint(t *testing.T) {
 	response := httptest.NewRecorder()
 	Router().ServeHTTP(response, request)
 	assert.Equal(t, 200, response.Code, "OK response is expected")
-	assert.Equal(t, "Hello Mas Adit", response.Body, "Incorect Body Found")
+	assert.Equal(t, "Hello Mas  Adit", response.Body.String(), "Incorect Body Found")
 }
